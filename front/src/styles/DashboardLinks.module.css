@@ -1,0 +1,28 @@
+.StatItem {
+    background-color: white;
+    box-shadow: 0px 4px 15px #ECECEC;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.StatItem h2 {
+    font-size: 2.5em;
+    margin-top: 10px;
+}
+.StatItem:active {
+    transform: scale(0.95);
+    box-shadow: none;
+  }
+.StatItemPurchased {
+    background-color: white;
+    box-shadow: 0px 4px 15px #ECECEC;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+.StatItemPurchased h2 {
+    font-size: 2.5em;
+    margin-top: 10px;
+}

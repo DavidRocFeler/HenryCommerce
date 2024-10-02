@@ -1,0 +1,5 @@
+.autoSizeImage {
+    max-width: 100%; /* Permite que la imagen ocupe el 100% del ancho de su contenedor */
+    height: 2rem; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+}

@@ -1,0 +1,70 @@
+.FormContent {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin:auto;
+    margin-top: 4rem;
+    box-shadow: 0px 4px 10px #F6F6F6;
+    padding: 2rem;
+}
+.FormContent h1 {
+    text-align: center;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.FormContent input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #E8F0FE;
+}
+.FormContent .checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+.FormContent .checkbox p {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1em;
+}
+.FormContent label {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.FormContent button {
+    background-color: #2E2E2E;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    border: 5px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.SignUp {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 1024px) {
+    .FormContent{
+        width: 70%;
+        margin-top: 13rem;
+    }
+}
+@media (max-width: 660px) {
+    .FormContent{
+        width: 90%;
+        margin-top: 13rem;
+    }
+}
+

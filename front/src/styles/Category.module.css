@@ -1,0 +1,6 @@
+.Category {
+    display: grid;
+    margin-left: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    height: fit-content;
+}

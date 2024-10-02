@@ -1,0 +1,27 @@
+### User History
+    - Header: This container will be rendered in all views of the application.
+        - NavBar: This component will allow the user to be redirected to the main views of the application.
+            - DashBoard: This component and its respective path will only be accessible when the user is logged in.
+                - Profile: The user needs to be logged in.
+                - CarStore: The user needs to be logged in. 
+                - WishList: The user needs to be logged in.
+                - Blog: The user does not need to be logged in.
+                - Orders: Within this component the user will be able to see all the orders placed in the shopping cart.
+            - Blog
+            - Store: This component is responsible for rendering all the products available in henry commerce.
+            - Sign Up: This component is responsible for registering users so that they can navigate the app.
+            - Log In: This is a modal component that is rendered every time the user requires it to enter different components.
+        - SearchBar
+        - Filter: This is a component that filters all products to render them by category.
+            - Phone
+            - Tablets
+            - Laptops
+            - Smarth Watch
+            - Accesories
+        - WishList
+    - Main
+        - CardList: This component is responsible for making a get-to-back http request to request all products.
+            - Card: This component receives the mapping of the CardList component and renders each product on a Card.
+    - Footer
+        - Subscribe
+        - ElseInfo

@@ -1,0 +1,15 @@
+.DivLogo {
+    position: relative;
+    left: 7rem;
+}
+
+@media (max-width: 1100px) {
+    .DivLogo {
+        left: 1.4rem;
+    }
+}
+@media (max-width: 660px) {
+    .DivLogo {
+        margin-right: 15rem;
+    }
+}

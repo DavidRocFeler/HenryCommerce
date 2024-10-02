@@ -1,0 +1,41 @@
+.mainContent {
+    margin-top: 1.3rem;
+    border-radius: 8px;
+    flex-grow: 1;
+    margin-left: 1rem;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0px 4px 15px #ECECEC;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mainContent:active {
+    transform: scale(0.95);
+    box-shadow: none;
+  }
+.userProfile {
+    text-align: center;
+}
+.profilePicture {
+    width: 10rem;
+    height: 10rem;
+    background-color: #4f5f73;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.userInfo h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.userInfo p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+.sidebar-menu {
+    list-style: none;
+    margin-top: 20px;
+}

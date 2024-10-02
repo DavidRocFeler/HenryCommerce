@@ -1,0 +1,124 @@
+.backgroundImage {
+    background-image: url("/footerBackground.png");
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+.FormSubscribe {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+.FormSubscribe h4 {
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.FormSubscribe p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.SearchSubscribe {
+    width: 100%;
+}
+.SearchSubscribe input {
+    border: black 2px solid;
+    width: 83%;
+    padding: 0.37rem 1rem 0.37rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.SearchSubscribe button {
+    background-color: black;
+    position: absolute;
+    margin-top: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.InputCheckbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.InputCheckbox p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 1rem;
+}
+.LinksFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.SubLinks {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+.SubLinks p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+.SubLinks h3 {
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.Figure {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+.SocialMedias {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 5rem;
+}
+.Pays {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+.Important {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .Figure {
+        margin-right: 5.5rem;
+    }
+}
+@media (max-width: 660px) {
+    .Pays {
+        display: none;
+    }
+    .Figure {
+        margin-right: 2rem;
+    }
+    .LinksFooter {
+        margin-left: 1rem;
+        display: grid;
+        column-gap: 2rem;
+        row-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .FormSubscribe {
+        width: 80%;
+        margin-left: 1rem;
+    }
+}

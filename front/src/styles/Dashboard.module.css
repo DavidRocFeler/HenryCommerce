@@ -1,0 +1,7 @@
+.DivDashboard {
+    background-image: url("/footerBackground.png");
+    display: flex;
+    height: 100%;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
