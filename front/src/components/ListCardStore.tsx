@@ -18,12 +18,11 @@ const ListCard = ({
     const { categoryId } = useProductContext();
     console.log(categoryId);
     return(
-        <section style={customStyle} className="pb-[2rem] ">
+        <section style={customStyle} className="pb-[2rem]">
             <div id={styles.infoProductUno} className="
             flex flex-row
             ">
                 <h4> {title} </h4>
-                { !disableLink && <Link href={linkUrl}> See more </Link>}
             </div>
             <div className="
             flex flex-row
@@ -43,6 +42,12 @@ const ListCard = ({
                         })
                     }
                 </div>
+            </div>
+            <div id={styles.infoProductSeeMore} className="
+            flex flex-row
+            justify-center
+            ">
+                { !disableLink && <Link href={linkUrl}> See more </Link>}
             </div>
         </section>
     )

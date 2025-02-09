@@ -4,6 +4,7 @@ import React from "react";
 import styles from "../styles/CardStore.module.css"
 import { ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { Heart } from "lucide-react";
 
 const Card: React.FC<IProduct> = ({id, name, price, description, categoryId, image, stock}) => {
     const router = useRouter();
@@ -20,20 +21,25 @@ const Card: React.FC<IProduct> = ({id, name, price, description, categoryId, ima
     }
 
     return(
-        <div className={styles.CardList}>
-            <button onClick={handleButtonProduct}>
-                <img className={styles.Image} src={image} alt="Product image" />
-            </button>
-            <>
-                <h1> {name} </h1>
-                <p> stock: {stock} </p>
-                <p> price: ${price} </p>
-            </>
-            <button className={styles.ButtonCar}>
-            <ShoppingCart className="
-            "/>
-            </button>
-        </div>
+        <section className=" flex flex-row justify-evenly">
+            <div className={styles.CardList}>
+                <button onClick={handleButtonProduct}>
+                    <img className={styles.Image} src={image} alt="Product image" />
+                </button>
+                <>
+                    <h1> {name} </h1>
+                    <p> stock: {stock} </p>
+                    <p> price: ${price} </p>
+                </>
+                <button className={styles.ButtonCar}>
+                <ShoppingCart className="
+                "/>
+                </button>
+                <button className={styles.ButtonHeart}>
+                    <Heart/>
+                </button>
+            </div>
+        </section>
     )
 }
 

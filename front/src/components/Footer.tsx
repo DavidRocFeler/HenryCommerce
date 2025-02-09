@@ -8,7 +8,7 @@ import PaysMedias from "@/images/PaysMedias/PaysMedias";
 
 const Footer = () => {
     return(
-        <>
+        <div className="">
             <footer className={styles.backgroundImage}>
                 <form action="" className={styles.FormSubscribe}>
                     <h4>Subscribe</h4>
@@ -66,7 +66,7 @@ const Footer = () => {
                     <p> 2024 - D techStore - Developed by Start4 - Legal Notice - Privacy Policy </p>
                 </aside>
             </footer>
-        </>
+        </div>
     )
 };
 

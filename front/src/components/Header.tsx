@@ -10,6 +10,8 @@ import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
 import categorieToPreload from "@/helpers/categorys";
 import { Menu } from "lucide-react";
+import { Heart } from "lucide-react";
+import { UserCircle } from "lucide-react";
 
 export const Header: React.FC = () => {
     const router = useRouter();
@@ -18,6 +20,8 @@ export const Header: React.FC = () => {
     const loginRef = useRef<HTMLDivElement>(null);
     const [userSession, setUserSession] = useState<boolean>(false); 
     const [ isOpen, setIsOpen ] = useState(false);
+    const [showCarTooltip, setShowCarTooltip] = useState(false);
+    const [showWishTooltip, setShowWishTooltip] = useState(false);
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
@@ -135,6 +139,7 @@ export const Header: React.FC = () => {
         flex flex-col 
         bg-[#FFFFFF] ">
             <nav className="
+            relative
             flex-row
             ml-auto
             mr-[2rem]
@@ -143,16 +148,6 @@ export const Header: React.FC = () => {
             mt-0
             lg:mr-[7rem]
             ">
-            <button onClick={handleDashboardClick} 
-            className="
-            text-[0.9rem]
-            text-[#424242]
-            font-bold
-            ml-[1rem]
-            mr-[1rem]
-            pt-[0rem]
-            ">Dashboard</button>
-            |
             <Link href="/blog" className="
             text-[0.9rem]
             text-[#424242]
@@ -174,6 +169,17 @@ export const Header: React.FC = () => {
                 <>
                 |
                 <button onClick={handleLogOutClick} className="text-[0.9rem] ml-[1rem] pt-[0rem] text-[#424242] mr-[0.2rem]"> Log out </button>
+                <button onClick={handleDashboardClick} 
+                className="
+                relative
+                top-[0.3rem]
+                text-[0.9rem]
+                text-[#424242]
+                font-bold
+                ml-[1rem]
+                mr-[1rem]
+                pt-[0rem]
+                "><UserCircle/></button>
                 </>
             )}
             </nav>
@@ -193,8 +199,57 @@ export const Header: React.FC = () => {
                 </form>
                 <div className="relative">
                     <button onClick={handleCarShopClick}>
-                        <ShoppingCart className={styles.CarShop} />
+                        <ShoppingCart className={styles.CarShop} 
+                       onMouseEnter={() => setShowCarTooltip(true)}
+                       onMouseLeave={() => setShowCarTooltip(false)}
+                       style={{ cursor: 'pointer' }}/>
                     </button>
+                    {showCarTooltip && (
+                        <div
+                        style={{
+                            position: 'absolute',
+                            top: '0rem',
+                            right: '10rem',
+                            transform: 'translateX(-50%)',
+                            backgroundColor: '#333',
+                            color: '#FFF',
+                            padding: '5px 10px',
+                            borderRadius: '4px',
+                            whiteSpace: 'nowrap',
+                            fontSize: '12px',
+                            marginTop: '5px',
+                            zIndex: 10,
+                        }}
+                        >
+                        Go to Cartshop
+                        </div>
+                    )}
+                    <button onClick={handleWishListClick} >
+                        <Heart className={styles.Heart} 
+                        onMouseEnter={() => setShowWishTooltip(true)}
+                        onMouseLeave={() => setShowWishTooltip(false)}
+                        style={{ cursor: 'pointer' }}/>
+                    </button>
+                    {showWishTooltip && (
+                        <div
+                        style={{
+                            position: 'absolute',
+                            top: '0rem',
+                            right: '5rem',
+                            transform: 'translateX(-50%)',
+                            backgroundColor: '#333',
+                            color: '#FFF',
+                            padding: '5px 10px',
+                            borderRadius: '4px',
+                            whiteSpace: 'nowrap',
+                            fontSize: '12px',
+                            marginTop: '5px',
+                            zIndex: 10,
+                        }}
+                        >
+                        Go to Wishlist
+                        </div>
+                    )}
                     {cartItemCount > 0 && (
                         <span className="absolute -top-0 -right-5 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                             {cartItemCount}
@@ -248,7 +303,6 @@ export const Header: React.FC = () => {
                         })
                     }
                 </div>
-                <button onClick={handleWishListClick} className={styles.menuExtra}>Wishlist</button>
             </div>
         </header>
 
