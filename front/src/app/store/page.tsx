@@ -1,4 +1,3 @@
-import AllStore from "@/views/AllStoreView";
 import StoreView from "@/views/StoreVIew";
 import React from "react";
 

@@ -1,6 +1,6 @@
 "use client"
 import { IUserSession } from "@/interface/types"
-import { useState, useEffect, createContext, useContext } from "react"
+import { createContext} from "react"
 
 export interface AuthContextProps {
     userData: IUserSession | null;
@@ -16,11 +16,3 @@ export const AuthContext = createContext({
 export interface AuthProviderProps {
     children: React.ReactNode
 }
-
-// export const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
-//     const [ userData, setUserData ] = useState<IUserSession | null>(null)  
-
-//     useEffect(() => {
-
-//     }, [])
-// }

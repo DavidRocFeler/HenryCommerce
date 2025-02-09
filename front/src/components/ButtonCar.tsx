@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import styles from "../styles/ButtonSend.module.css"
 
-const ButtonCar: React.FC<ILabelComponentProps> = ({ product, units, viewType, orderStatus }) => {
+const ButtonCar: React.FC<ILabelComponentProps> = ({ viewType }) => {
     const router = useRouter();
     const [isDisabled, setIsDisabled] = useState<boolean>(true)
 

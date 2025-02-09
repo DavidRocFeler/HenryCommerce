@@ -1,9 +1,7 @@
 import Card from "@/components/CardStore";
 import { getProductByCategorieId } from "@/helpers/products.helpers";
-import StoreView from "@/views/StoreVIew";
 import React from "react";
 import styles from "../../../styles/Category.module.css"
-import ListCard from "@/components/ListCardStore";
 
 const StoreCategory = async ({params}: {params: {storeId: string}}) => {
     const {storeId} = params;

@@ -33,7 +33,7 @@ const Footer = () => {
                         <h3> It may interested you </h3>
                         <a href="">Downloads</a>
                         <a href="">Offers</a>
-                        <a href="">Begginer's guide</a>
+                        <a href="">Begginer&apos;s guide</a>
                         <a href="">Videos</a>
                     </div>
                     <div className={styles.SubLinks}>
