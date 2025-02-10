@@ -11,18 +11,15 @@ import { Product } from "../entities/Product";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
-  url: process.env.DATABASE_URL,  // ✅ Usamos la URL de conexión de NeonDB
+  url: process.env.DATABASE_URL,  // ✅ Usa la URL de conexión con sslmode=require
   synchronize: true,
   dropSchema: false,
   logging: false,
-  ssl: {
-    rejectUnauthorized: false, // ✅ Importante para conexiones seguras en NeonDB
-  },
+  ssl: process.env.DATABASE_URL?.includes("neon.tech") ? { rejectUnauthorized: false } : false, // ✅ Configuración para NeonDB
   entities: [User, Credential, Order, Product, Category],
   subscribers: [],
   migrations: [],
 });
-
 
 // import { DataSource } from "typeorm";
 // import { DB_HOST, DB_NAME, DB_PASSWORD, DB_PORT, DB_USER } from './envs'
